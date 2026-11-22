@@ -5,6 +5,9 @@ component analysis (PCA), and a nearest-centroid classifier on synthetic data.
 Open `index.html` in a modern browser or serve the folder with
 `python -m http.server`.
 
+To publish on GitHub Pages, choose **Settings → Pages → Deploy from a branch**,
+then select `main` and `/ (root)`.
+
 - **PCA:** project three features into two principal components. PCA is fit on
   the training split, and explained-variance percentages describe that split.
 - **Clustering:** run deterministic k-means on the projected data. Cluster
