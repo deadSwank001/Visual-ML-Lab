@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Visual ML Lab</title><link rel="stylesheet" href="style.css"></head>
+<body>
+<main>
+  <header><p class="eyebrow">A HANDS-ON MACHINE LEARNING PLAYGROUND</p><h1>Make the math visible.</h1><p>Explore how data, projections, clusters, and simple models interact.</p></header>
+  <section class="layout">
+    <aside>
+      <h2>Experiment</h2>
+      <label>View <select id="mode"><option value="pca">PCA projection</option><option value="cluster">K-means clustering</option><option value="classify">Nearest-centroid classifier</option></select></label>
+      <label>Noise <input id="noise" type="range" min="0.2" max="2.5" step="0.1" value="0.8"><output id="noiseValue"></output></label>
+      <label>Random seed <input id="seed" type="number" min="0" max="99999" value="42"></label>
+      <label id="kLabel">Clusters <select id="k"><option>2</option><option selected>3</option><option>4</option></select></label>
+      <button id="generate" type="button">Generate dataset</button>
+      <p>120 synthetic samples, 3 features, 2 classes. Every fifth pair is held out for testing.</p>
+    </aside>
+    <section class="visual">
+      <div class="visual-head"><div><p class="eyebrow">LIVE EXPERIMENT</p><h2 id="title"></h2></div><p id="metric" role="status"></p></div>
+      <svg id="plot" viewBox="0 0 760 510" role="img" aria-label="Interactive machine learning visualization"></svg>
+      <p id="explanation"></p><p id="legend"></p>
+    </section>
+  </section>
+  <footer>Educational demo using generated data. The test split is not used to fit PCA or the classifier.</footer>
+</main>
+<script src="lab.js"></script><script src="app.js"></script>
+</body></html>
